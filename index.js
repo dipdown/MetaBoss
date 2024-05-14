@@ -19,14 +19,14 @@ async function initWebSocket() {
                 text: `
 Status : Connecting To Metaboss Web Socket
 
-USER DATA 
+[+] USER DATA [+] 
 Username       : ${event.userData.name}
 Id             : ${event.userData.id}
 Total Mission  : ${event.userData.mission.length}
 
 Boss Max HP    : ${event.bossInfo.maxHp}
 Current HP     : ${event.bossInfo.currentHp}
-Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
+Cooldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
 `,
             });
 
@@ -42,14 +42,14 @@ Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
                 text: `
 Status : Received ping from server
 
-USER DATA 
+[+] USER DATA [+] 
 Username       : ${event.userData.name}
 Id             : ${event.userData.id}
-Total Misison  : ${event.userData.mission.length}
+Total Mission  : ${event.userData.mission.length}
 
 Boss Max HP    : ${event.bossInfo.maxHp}
 Current HP     : ${event.bossInfo.currentHp}
-Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
+Cooldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
 `,
             });
 
@@ -61,14 +61,14 @@ Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
                 text: `
 Status : Received pong from server
 
-USER DATA 
+[+] USER DATA [+] 
 Username       : ${event.userData.name}
 Id             : ${event.userData.id}
-Total Misison  : ${event.userData.mission.length}
+Total Mission  : ${event.userData.mission.length}
 
 Boss Max HP    : ${event.bossInfo.maxHp}
 Current HP     : ${event.bossInfo.currentHp}
-Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
+Cooldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
 `,
             });
 
@@ -83,14 +83,14 @@ async function closeWebSocket() {
             text: `
 Status : Web Socket Closed
 
-USER DATA 
+[+] USER DATA [+] 
 Username       : ${event.userData.name}
 Id             : ${event.userData.id}
-Total Misison  : ${event.userData.mission.length}
+Total Mission  : ${event.userData.mission.length}
 
 Boss Max HP    : ${event.bossInfo.maxHp}
 Current HP     : ${event.bossInfo.currentHp}
-Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
+Cooldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
 `,
         });
     }
@@ -101,14 +101,14 @@ async function getUserInfo(accountID, userName) {
         text: `
 Status : Getting User Info Event
 
-USER DATA 
+[+] USER DATA [+] 
 Username       : ${event.userData.name}
 Id             : ${event.userData.id}
-Total Misison  : ${event.userData.mission.length}
+Total Mission  : ${event.userData.mission.length}
 
 Boss Max HP    : ${event.bossInfo.maxHp}
 Current HP     : ${event.bossInfo.currentHp}
-Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
+Cooldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
 `,
     });
 
@@ -125,14 +125,14 @@ Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
                     text: `
 Status : Running on - Account ${accountID}
 
-USER DATA 
+[+] USER DATA [+] 
 Username       : ${data.name}
 Id             : ${data.id}
-Total Misison  : ${data.mission.length}
+Total Mission  : ${data.mission.length}
 
 Boss Max HP    : ${event.bossInfo.maxHp}
 Current HP     : ${event.bossInfo.currentHp}
-Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
+Cooldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
       `,
                 });
 
@@ -152,14 +152,14 @@ async function claimBossChest(accountID) {
         text: `
 Status : Getting Chess Info Event
 
-USER DATA 
+[+] USER DATA [+] 
 Username       : ${event.userData.name}
 Id             : ${event.userData.id}
-Total Misison  : ${event.userData.mission.length}
+Total Mission  : ${event.userData.mission.length}
 
 Boss Max HP    : ${event.bossInfo.maxHp}
 Current HP     : ${event.bossInfo.currentHp}
-Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
+Cooldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
   `,
     });
 
@@ -181,14 +181,14 @@ Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
                     text: `
 Status : All Chest Claimed for Account ${accountID}
 
-USER DATA 
+[+] USER DATA [+] 
 Username       : ${event.userData.name}
 Id             : ${event.userData.id}
-Total Misison  : ${event.userData.mission.length}
+Total Mission  : ${event.userData.mission.length}
 
 Boss Max HP    : ${event.bossInfo.maxHp}
 Current HP     : ${event.bossInfo.currentHp}
-Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
+Cooldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
 
 Continue action
         `,
@@ -209,14 +209,14 @@ async function getBossInfo(attack = false, msg = "") {
                         text: `
 Status : Attacking ${msg}
 
-USER DATA 
+[+] USER DATA [+] 
 Username       : ${event.userData.name}
 Id             : ${event.userData.id}
-Total Misison  : ${event.userData.mission.length}
+Total Mission  : ${event.userData.mission.length}
 
 Boss Max HP    : ${event.bossInfo.maxHp}
 Current HP     : ${event.bossInfo.currentHp}
-Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
+Cooldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
     `,
                     });
                     client.send(event.attackBoss());
@@ -226,14 +226,14 @@ Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
                         text: `
 Status : Getting Boss Info Event
 
-USER DATA 
+[+] USER DATA [+] 
 Username       : ${event.userData.name}
 Id             : ${event.userData.id}
-Total Misison  : ${event.userData.mission.length}
+Total Mission  : ${event.userData.mission.length}
 
 Boss Max HP    : ${event.bossInfo.maxHp}
 Current HP     : ${event.bossInfo.currentHp}
-Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
+Cooldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
     `,
                     });
                 }
@@ -252,14 +252,14 @@ Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
                                         text: `
 Status : ${attack ? `Attacking ${msg}` : "Getting Boss Info Event"}
 
-USER DATA 
+[+] USER DATA [+] 
 Username       : ${event.userData.name}
 Id             : ${event.userData.id}
-Total Misison  : ${event.userData.mission.length}
+Total Mission  : ${event.userData.mission.length}
 
 Boss Max HP    : ${event.bossInfo.maxHp}
 Current HP     : ${event.bossInfo.currentHp}
-Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
+Cooldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
 
     `,
       });
@@ -292,14 +292,14 @@ async function startBot(idx) {
     text: `
 Status : Running Bot for Account : ${idx + 1}
 
-USER DATA 
+[+] USER DATA [+] 
 Username       : ${event.userData.name}
 Id             : ${event.userData.id}
-Total Misison  : ${event.userData.mission.length}
+Total Mission  : ${event.userData.mission.length}
 
 Boss Max HP    : ${event.bossInfo.maxHp}
 Current HP     : ${event.bossInfo.currentHp}
-Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
+Cooldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
 `,
   });
   try {
@@ -311,14 +311,14 @@ Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
       text: `
 Status : WebSocket initialized for account ${idx + 1} (${accountID})
 
-USER DATA 
+[+] USER DATA [+] 
 Username       : ${event.userData.name}
 Id             : ${event.userData.id}
-Total Misison  : ${event.userData.mission.length}
+Total Mission  : ${event.userData.mission.length}
 
 Boss Max HP    : ${event.bossInfo.maxHp}
 Current HP     : ${event.bossInfo.currentHp}
-Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
+Cooldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
   `,
     });
 
@@ -347,14 +347,14 @@ Status : All accounts are in cooldown waiting for 5 Minutes
                 text: `
 Status : Restarting with the first account
 
-USER DATA
+[+] USER DATA [+] 
 Username       : ${event.userData.name}
 Id             : ${event.userData.id}
-Total Misison  : ${event.userData.mission.length}
+Total Mission  : ${event.userData.mission.length}
 
 Boss Max HP    : ${event.bossInfo.maxHp}
 Current HP     : ${event.bossInfo.currentHp}
-Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
+Cooldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
                     `,
               });
               accountList = account.map((item) => [item, false]);
@@ -364,14 +364,14 @@ Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
                 text: `
 Status : Restarting with the next account - ${nextIdx}
 
-USER DATA
+[+] USER DATA [+] 
 Username       : ${event.userData.name}
 Id             : ${event.userData.id}
-Total Misison  : ${event.userData.mission.length}
+Total Mission  : ${event.userData.mission.length}
 
 Boss Max HP    : ${event.bossInfo.maxHp}
 Current HP     : ${event.bossInfo.currentHp}
-Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
+Cooldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
                     `,
               });
               await startBot(nextIdx);
@@ -383,14 +383,14 @@ Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
               text: `
 Status : Boss Currently have ${event.bossInfo.currentHp} HP
 
-USER DATA
+[+] USER DATA [+] 
 Username       : ${event.userData.name}
 Id             : ${event.userData.id}
-Total Misison  : ${event.userData.mission.length}
+Total Mission  : ${event.userData.mission.length}
 
 Boss Max HP    : ${event.bossInfo.maxHp}
 Current HP     : ${event.bossInfo.currentHp}
-Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
+Cooldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
 Attacking for ${event.bossInfo.currentHp} Times
                   `,
             });
@@ -399,14 +399,14 @@ Attacking for ${event.bossInfo.currentHp} Times
                 text: `
 Status : Attacking Bos - (${event.bossInfo.currentHp - 1} Left)
 
-USER DATA
+[+] USER DATA [+] 
 Username       : ${event.userData.name}
 Id             : ${event.userData.id}
-Total Misison  : ${event.userData.mission.length}
+Total Mission  : ${event.userData.mission.length}
 
 Boss Max HP    : ${event.bossInfo.maxHp}
 Current HP     : ${event.bossInfo.currentHp}
-Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
+Cooldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
                     `,
               });
               await getBossInfo(true, `- (${event.bossInfo.currentHp - 1} Left)`);
@@ -415,14 +415,14 @@ Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
               text: `
 Status : Boss HP now ${event.bossInfo.currentHp} HP
 
-USER DATA
+[+] USER DATA [+] 
 Username       : ${event.userData.name}
 Id             : ${event.userData.id}
-Total Misison  : ${event.userData.mission.length}
+Total Mission  : ${event.userData.mission.length}
 
 Boss Max HP    : ${event.bossInfo.maxHp}
 Current HP     : ${event.bossInfo.currentHp}
-Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
+Cooldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
 
 Claiming Chest
                   `,
@@ -438,14 +438,14 @@ Claiming Chest
           text: `
 Status : Restarting with the same account - Undefined User Info
 
-USER DATA 
+[+] USER DATA [+] 
 Username       : ${event.userData.name}
 Id             : ${event.userData.id}
-Total Misison  : ${event.userData.mission.length}
+Total Mission  : ${event.userData.mission.length}
 
 Boss Max HP    : ${event.bossInfo.maxHp}
 Current HP     : ${event.bossInfo.currentHp}
-Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
+Cooldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
       `,
         });
         await startBot(idx);
@@ -456,14 +456,14 @@ Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
         text: `
 Status : Restarting with the same account - Socket Not Ready
 
-USER DATA 
+[+] USER DATA [+] 
 Username       : ${event.userData.name}
 Id             : ${event.userData.id}
-Total Misison  : ${event.userData.mission.length}
+Total Mission  : ${event.userData.mission.length}
 
 Boss Max HP    : ${event.bossInfo.maxHp}
 Current HP     : ${event.bossInfo.currentHp}
-Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
+Cooldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
     `,
       });
       await startBot(idx);
@@ -474,14 +474,14 @@ Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
       text: `
   Status : Restarting with the same account - error occurred ${error}
 
-  USER DATA
+  [+] USER DATA [+] 
   Username       : ${event.userData.name}
   Id             : ${event.userData.id}
-  Total Misison  : ${event.userData.mission.length}
+  Total Mission  : ${event.userData.mission.length}
 
   Boss Max HP    : ${event.bossInfo.maxHp}
   Current HP     : ${event.bossInfo.currentHp}
-  Colldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
+  Cooldown       : ${millisecondsToHoursAndMinutes(event.bossInfo.remain)}
     `,
     });
     await startBot(idx);
