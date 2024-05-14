@@ -13,7 +13,7 @@ Metaboss is tap tap game on telegram that run on TON chain.
 - clone the project `git clone https://github.com/dipdown/MetaBoss.git`
 - run `cd metaboss`
 - run `npm install`
-- open `/src/account.js` and change your id & username
+- open `/src/account.js` and edit your id & username
 - run `npm run start`
 
 ## How To Update
