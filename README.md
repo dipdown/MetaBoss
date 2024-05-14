@@ -4,7 +4,7 @@ Metaboss is tap tap game on telegram that run on TON chain.
 
 ## Register Metaboss Account
 
-- Join Metaboss on Telegram [HERE](https://t.me/metaboss_2024_bot?start=ref_5703822759)
+- Join Metaboss on Telegram [Here](https://t.me/metaboss_2024_bot?start=ref_897038530)
 - Start Bot `/start`
 - Play `/play`
 
